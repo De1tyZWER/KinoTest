@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка теперь sticky, а не fixed — чтобы не вырываться из потока */
+header {
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #e50914;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.mbpanel {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.mbpanel span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+    margin: 0 15px;
+}
+
+.nav-links a:hover {
+    color: #e50914;
+}
+
+.auth-button a {
+    background-color: #ff0000;
+    color: white;
+    margin: 5px;
+    padding: 4px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.auth-button a:hover {
+    background-color: #f40612;
+}
+
+/* Баннер с описанием */
+.promo-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://observer.com/wp-content/uploads/sites/2/2019/12/gettyimages-108387402.jpg?resize=635,407') center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px; /* компенсация sticky-хедера */
+}
+
+.promo-banner h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.promo-banner p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+.promo-banner button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.promo-banner button:hover {
+    background-color: #f40612;
+}
+
+/* Новые фильмы */
+.new-movies {
+    padding: 50px 0;
+    background-color: #1a1a1a;
+}
+
+.new-movies h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Популярные фильмы */
+.pop-movies {
+    padding: 50px 0;
+    background-color: #1f1f1f;
+}
+
+.pop-movies h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.movie-card h3 {
+    font-size: 18px;
+}
+
+/* Подвал (футер) */
+footer {
+    flex-shrink: 0;
+    background-color: #0a0a0a;
+    padding: 40px 0 20px;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: #e50914;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+.footer-section ul li a:hover {
+    color: #e50914;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #666666;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 0;
+}
+
+.rule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .mbpanel {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        height: calc(100vh - 70px);
+        width: 70%;
+        background-color: #1a1a1a;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    .header-content {
+        justify-content: space-between;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .auth-button a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .promo-banner {
+        height: 400px;
+        margin-top: 70px;
+    }
+
+    .promo-banner h2 {
+        font-size: 32px;
+    }
+
+    .promo-banner p {
+        font-size: 16px;
+    }
+
+    .promo-banner button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .movie-card h3 {
+        font-size: 14px;
+    }
+
+    .new-movies h2,
+    .pop-movies h2 {
+        font-size: 24px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .promo-banner {
+        height: 350px;
+    }
+
+    .promo-banner h2 {
+        font-size: 24px;
+    }
+
+    .promo-banner p {
+        font-size: 14px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 10px;
+    }
+
+    .movie-card h3 {
+        font-size: 12px;
+    }
+}
