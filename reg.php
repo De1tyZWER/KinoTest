@@ -49,7 +49,7 @@ session_start();
 
                 <div class="terms">
                     <input type="checkbox" id="terms" required>
-                    <label for="terms">Я согласен с <a href="rule.html">условиями использования</a> и <a href="rule.html">политикой конфиденциальности</a></label>
+                    <label for="terms">Я согласен с <a href="rule.php">условиями использования</a> и <a href="rule.html">политикой конфиденциальности</a></label>
                 </div>
 
                 <button type="submit" class="reg-button">Зарегистрироваться</button>
