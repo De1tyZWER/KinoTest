@@ -1,10 +1,10 @@
 Простой веб-сайт онлайн-кинотеатра, созданный в рамках учебного проекта, реализующий регистрацию, авторизацию, личный кабинет и просмотр фильмов.
 
 Технологии
-  Frontend: HTML, CSS, JavaScript
-  Backend: PHP
-  База данных: MySQL
-  Среда разработки: VSCode, OS Panel, PhpMyAdmin
+Frontend: HTML, CSS, JavaScript
+Backend: PHP
+База данных: MySQL
+Среда разработки: VSCode, OS Panel, PhpMyAdmin
   
 Установка и использование
 
